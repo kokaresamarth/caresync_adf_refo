@@ -4,7 +4,7 @@
 		"annotations": [],
 		"type": "PostgreSqlV2",
 		"typeProperties": {
-			"server": "ep-muddy-rice-ao3gm39d.c-2.ap-southeast-1.aws.neon.tech",
+			"server": "ep-rapid-haze-b3it8dve-pooler.c-4.ap-southeast-1.aws.neon.tech",
 			"port": 5432,
 			"database": "neondb",
 			"username": "neondb_owner",

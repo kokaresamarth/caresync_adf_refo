@@ -4,6 +4,7 @@
 		"activities": [
 			{
 				"name": "Read Source Table List",
+				"description": "",
 				"type": "Lookup",
 				"dependsOn": [],
 				"policy": {
@@ -18,7 +19,7 @@
 					"source": {
 						"type": "AzureSqlSource",
 						"sqlReaderQuery": {
-							"value": "@select table_id from ctrl.table_config WHERE is_active=1 and source_system='(pipeline().parameters.source_system)'",
+							"value": "select table_id from ctrl.table_config WHERE is_active=1 and source_system='@{pipeline().parameters.source_system}'",
 							"type": "Expression"
 						},
 						"queryTimeout": "02:00:00",
@@ -27,7 +28,8 @@
 					"dataset": {
 						"referenceName": "AzureSqlTable1",
 						"type": "DatasetReference"
-					}
+					},
+					"firstRowOnly": false
 				}
 			}
 		],
